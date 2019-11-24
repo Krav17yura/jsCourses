@@ -623,7 +623,7 @@ console.log(value);
 
 
 
-let money = prompt("Ваш бюджет на месяц?", 1500);
+let money = +prompt("Ваш бюджет на месяц?", 1500);
 let time = prompt("Введите дату в формате YYYY-MM-DD");
 
 let appData = {
@@ -636,11 +636,69 @@ let appData = {
 };
 
 
-let a1 = prompt("Введите обязательную статью расходов в этом месяце", ''),
-	a2 = prompt("Во сколько обойдется?", ''),
-	a3 = prompt("Введите обязательную статью расходов в этом месяце", ''),
-	a4 = prompt("Во сколько обойдется?", '');
 
-	appData.expenses[a1] = a2;
-	appData.expenses[a3] = a4;
-	alert(appData.budget / 30);
+
+
+ 
+for (let i = 0; i < 2; i++) {
+	let a = prompt("Введите обязательную статью расходов в этом месяце", ""),
+		b = +prompt("Во сколько обойдется?", '');
+	
+		if((typeof (a)) === "string" && typeof(a) !== null &&
+			 typeof(b) !== null && a !== "" && b !== "" && !isNaN(b)){
+				 console.log("done");
+				appData.expenses[a] = b;
+			 }else{
+				 console.log("EROR");
+			 }
+			
+}
+
+/*  let i = 0;
+ while (i < 2) {
+
+	 let a = prompt("Введите обязательную статью расходов в этом месяце", ""),
+		b = +prompt("Во сколько обойдется?", '');
+	
+		if((typeof (a)) === "string" && typeof(a) !== null &&
+			 typeof(b) !== null && a !== "" && b !== "" && !isNaN(b)){
+				 console.log("done");
+				appData.expenses[a] = b;
+			 }else{
+				 console.log("EROR");
+			 }
+			 i++;
+ }
+ */
+/* 
+let i = 0;
+
+do {
+	let a = prompt("Введите обязательную статью расходов в этом месяце", ""),
+		b = +prompt("Во сколько обойдется?", '');
+
+	if ((typeof (a)) === "string" && typeof (a) !== null &&
+		typeof (b) !== null && a !== "" && b !== "" && !isNaN(b)) {
+		console.log("done");
+		appData.expenses[a] = b;
+	} else {
+		console.log("EROR");
+	}
+	i++;
+} while (i < 2) {
+
+} */
+
+appData.moneyPerData = appData.budget / 30;
+
+alert("Ежедневный бюджет" + appData.moneyPerData);
+
+if (appData.moneyPerData < 100) {
+	console.log("Минимальный уровень дохода");
+} else if (appData.moneyPerData > 100 && appData.moneyPerData < 2000) {
+	console.log("Средний доход");
+} else if (appData.moneyPerData > 2000) {
+	console.log("Высокий доход");
+} else {
+	console.log("eror");
+}
