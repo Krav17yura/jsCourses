@@ -599,8 +599,8 @@ console.log(div);
 console.log(colonOdd(num));
  */
 
- /* last commit  */
- 
+/* last commit  */
+
 // const num = prompt('Введите число', 44);
 
 // function colon (num){
@@ -608,7 +608,7 @@ console.log(colonOdd(num));
 // 	let result = [str[0]];
 
 // 	for (var i = 0; i<str.lenght; i++){
-		
+
 // 	}
 
 // }
@@ -620,6 +620,27 @@ const b = "10";
 let value = (i ==  b) ? "равно " :"неравно";
 console.log(value);
   */
- 
- let i ;
- 
+
+
+
+let money = prompt("Ваш бюджет на месяц?", 1500);
+let time = prompt("Введите дату в формате YYYY-MM-DD");
+
+let appData = {
+	budget: money,
+	timeData: time,
+	expenses: {},
+	optionalExpenses: {},
+	income: [],
+	savings: false
+};
+
+
+let a1 = prompt("Введите обязательную статью расходов в этом месяце", ''),
+	a2 = prompt("Во сколько обойдется?", ''),
+	a3 = prompt("Введите обязательную статью расходов в этом месяце", ''),
+	a4 = prompt("Во сколько обойдется?", '');
+
+	appData.expenses[a1] = a2;
+	appData.expenses[a3] = a4;
+	alert(appData.budget / 30);
