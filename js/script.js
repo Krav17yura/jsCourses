@@ -621,5 +621,5 @@ let value = (i ==  b) ? "равно " :"неравно";
 console.log(value);
   */
  
- 
+ let i ;
  
