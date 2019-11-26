@@ -622,7 +622,7 @@ console.log(value);
   */
 
 
-
+/* 
 let money,
 	time;
 
@@ -684,13 +684,9 @@ let appData = {
 	checkSavings : function(){
 		if (appData.savings == true){
 			let depozit = +prompt("Какой у вас депозит", 3000);
-			  /*  while (isNaN(depozit) || depozit == null || depozit == "") {
-				let depozit = +prompt("Какой у вас депозит", 3000);
-			} */
+			 
 			let percent = +prompt('Под какой процент?',1.3);
-			/* while (isNaN(percent) || percent == null || percent == "") {
-				let depozit = +prompt("Какой у вас депозит", 3000);
-			} */
+			 
 				appData.manthInCome = depozit / 100 / 12 * percent;
 				alert("Доход с вашего депозита за месяц: " + (appData.manthInCome).toFixed(1));
 		  }
@@ -724,7 +720,7 @@ let appData = {
 			console.log("Наша программа включает в себя данные " + key + " --- " + appData[key]);
 		}
 	}
-};
+}; */
 
 
  
@@ -809,3 +805,39 @@ console.log(arrLength); */
  
 
  
+															/*    lesson 20 */
+															
+let box = document.getElementById("box"),
+	button = document.getElementsByTagName("button"),
+	circle = document.getElementsByClassName("circle"),
+	heart = document.querySelectorAll(".wrapper .heart"),
+	h = document.querySelector(".heart"),
+	wrapper = document.querySelector(".wrapper");
+ 
+	circle[0].style.backgroundColor = "red";
+	circle[1].style.backgroundColor = "green";
+	circle[2].style.backgroundColor = "yellow";
+
+	for (let i = 0; i < heart.length; i++){
+		heart[i].style.backgroundColor = "green";
+	}
+
+	heart.forEach(function(item,i,mass){
+		item.style.backgroundColor = "yellow";
+	});
+
+		 let div = document.createElement("div");
+		 div.classList.add("black");
+		   document.body.insertBefore(div, circle[2]);
+			document.body.removeChild(circle[2]);
+			div.innerHTML = "Hello world";
+			wrapper.removeChild(heart[0]);
+			wrapper.replaceChild(button[1], heart[1]);
+
+
+ 
+
+ 
+ 													
+
+													
