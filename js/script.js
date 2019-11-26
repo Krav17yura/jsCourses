@@ -622,7 +622,7 @@ console.log(value);
   */
 
 
-/* 
+
 let money,
 	time;
 
@@ -720,8 +720,9 @@ let appData = {
 			console.log("Наша программа включает в себя данные " + key + " --- " + appData[key]);
 		}
 	}
-}; */
+};
 
+appData.showMethods();
 
  
  
@@ -806,7 +807,7 @@ console.log(arrLength); */
 
  
 															/*    lesson 20 */
-															
+											/* 				
 let box = document.getElementById("box"),
 	button = document.getElementsByTagName("button"),
 	circle = document.getElementsByClassName("circle"),
@@ -834,7 +835,7 @@ let box = document.getElementById("box"),
 			wrapper.removeChild(heart[0]);
 			wrapper.replaceChild(button[1], heart[1]);
 
-
+ */
  
 
  
